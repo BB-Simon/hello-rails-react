@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchGreeting } from '../store/greeting/greetingSlice';
-import { useEffect } from 'react';
 
 const Greeting = ({}) => {
   const { message, loading } = useSelector((state) => state.greeting);
@@ -11,16 +10,15 @@ const Greeting = ({}) => {
     dispatch(fetchGreeting);
   }, []);
 
-
-  if(loading) {
-    return <p>Loading...!</p>
+  if (loading) {
+    return <p>Loading...!</p>;
   }
 
   return (
     <div>
       <h1>{message}</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Greeting
+export default Greeting;
