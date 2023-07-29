@@ -5,14 +5,10 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
+import Greeting from './components/Greeting';
 
-const Hello = () => {
-  return (
-    'Hello world from app'
-  )
-}
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route index element={<Hello />} />),
+  createRoutesFromElements(<Route index element={<Greeting />} />),
 );
 
 function App() {

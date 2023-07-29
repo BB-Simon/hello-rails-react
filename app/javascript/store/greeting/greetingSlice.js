@@ -14,7 +14,7 @@ export const fetchGreeting = createAsyncThunk(
 
 const initialState = {
   message: '',
-  isLoading: true,
+  loading: true,
 };
 
 export const GreetingSlice = createSlice({
