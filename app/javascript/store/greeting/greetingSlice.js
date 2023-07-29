@@ -24,16 +24,16 @@ export const GreetingSlice = createSlice({
     builder
       .addCase(fetchGreeting.pending, (state) => ({
         ...state,
-        isLoading: true,
+        loading: true,
       }))
       .addCase(fetchGreeting.fulfilled, (state, action) => ({
         ...state,
-        isLoading: false,
+        loading: false,
         message: action.payload.message,
       }))
       .addCase(fetchGreeting.rejected, (state) => ({
         ...state,
-        isLoading: false,
+        loading: false,
       }));
   },
 });

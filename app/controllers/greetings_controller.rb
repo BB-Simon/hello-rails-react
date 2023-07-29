@@ -4,6 +4,8 @@ class GreetingsController < ApplicationController
 
   def greeting
     greeting = Greeting.all.sample
+
+    puts greeting
     render json: greeting
   end
 end
