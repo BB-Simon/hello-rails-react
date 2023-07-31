@@ -7,8 +7,8 @@ const Greeting = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchGreeting);
-  }, []);
+    dispatch(fetchGreeting());
+  }, [dispatch]);
 
   if (loading) {
     return <p>Loading...!</p>;
